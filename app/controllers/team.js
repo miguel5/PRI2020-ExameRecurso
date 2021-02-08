@@ -6,7 +6,7 @@ var Team = require('../models/team')
 module.exports.listar = () => {
     return Team
         .find()
-        .select('_id team pitch1 pitch2 techPitch businessReport techReport nmembers')
+        .select('_id team pitch1 pitch2 techPitch businessReport techReport')
         .exec()
 }
 

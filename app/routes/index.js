@@ -84,12 +84,5 @@ router.delete('/api/teams/:id', function(req, res, next) {
     .catch(e => res.status(500).jsonp({error: e}))
 });
 
-router.get('/classes', function(req, res, next) {
-  var t = localStorage.getItem('myToken')
-  axios.get('http://clav-api.di.uminho.pt/v2/classes?nivel=1&token=' + t)
-    .then(dados => res.render('classes', {classes: dados.data}))
-    .catch(e => res.render('error', {error: e}))
-});
-
 
 module.exports = router;
