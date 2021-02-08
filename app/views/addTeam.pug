@@ -1,0 +1,32 @@
+extends layout
+
+block content
+
+    .w3-light-grey
+        header.w3-container.w3-theme-d4.w3-text-white.w3-margin-bottom
+            h1 Adicionar equipa
+        form.w3-container.w3-padding-large(action='/addTeam' method='POST')
+
+            h5.w3-cell-row.w3-padding
+                label.w3-cell(style="width:100px") id:
+                input.w3-input.w3-margin-left.w3-round.w3-cell(style="width:500px" type="text" name="id" value=`${id}`)
+            h5.w3-cell-row.w3-padding
+                label.w3-cell(style="width:100px") guid:
+                input.w3-input.w3-margin-left.w3-round.w3-cell(style="width:500px" type="text" name="guid" value=`${guid}`)
+            h5.w3-cell-row.w3-padding
+                label.w3-cell(style="width:100px") team:
+                input.w3-input.w3-margin-left.w3-round.w3-cell(style="width:500px" type="text" name="team" value=`${team}`)
+            h5.w3-cell-row.w3-padding
+                label.w3-cell(style="width:100px") pitch1:
+                input.w3-input.w3-margin-left.w3-round.w3-cell(style="width:500px" type="text" name="pitch1" value=`${pitch1}`)
+            h5.w3-cell-row.w3-padding
+                label.w3-cell(style="width:100px") pitch2:
+                input.w3-input.w3-margin-left.w3-round.w3-cell(style="width:500px" type="text" name="pitch2" value=`${pitch2}`)
+
+            h5.w3-cell-row.w3-padding.w3-margin-top
+                input.w3-btn.w3-blue-grey.w3-round(type="submit" value="Enviar")
+
+
+        .w3-container.w3-theme-d4.w3-text-white.w3-padding.w3-margin-top.w3-padding-large
+            address 
+                a(href="/") Voltar

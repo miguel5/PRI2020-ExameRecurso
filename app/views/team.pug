@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  header.w3-container.w3-blue-grey
+    h1 Team #{team._id} - #{team.team}
+  .w3-container.w3-padding
+    b guid:
+    span  #{team.guid}
+    p
+      b Membros:
+      each m in team.members
+        li
+          span Nome - #{m.name}
+
+
+  div
+    address
+      a(href='/addMember') Adicionar membro
+
+  footer.w3-container.w3-blue-grey.w3-padding-medium
+    address.w3-padding-16
+        a(href=`/classe/${ant}?classe=${ant}`).w3-right Voltar atrás
+        
+    

@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  header.w3-container.w3-blue-grey
+    h1 Equipas PEI
+  .w3-container
+    ul
+      each c in teams
+        li
+          adress
+            a(href=`/team/${c._id}`) #{c._id}
+          span  - #{c.titulo}
+          span  - #{c.team}
+          span  - #{c.pitch1}
+          span  - #{c.pitch2}
+          span  - #{c.techPitch}
+          span  - #{c.businessReport}
+          span  - #{c.techReport}
+  
+  a(href=`/addTeam/`) Adicionar Equipa
+          
+        
+    
