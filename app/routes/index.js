@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var axios = require('axios')
+var jwt = require('jsonwebtoken')
 const Team = require('../controllers/team')
 
 if(typeof localStorage === "undefined" || localStorage === null){
@@ -25,9 +26,10 @@ router.get('/teams/:id', function(req, res) {
 });
 
 router.get('/api/token', function(req, res) {
-  Team.consultar(req.query.id)
-    .then(dados => res.render('team', {team: dados}))
-    .catch(e => res.status(500).jsonp({error: e}))
+  jwt.sign("DAW-PRI-2020-recurso", function(e,token) {
+      res.status(201).jsonp({token: token})
+
+    })
 
 });
 
