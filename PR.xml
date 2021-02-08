@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pr>
+    <meta>
+        <key>PRI2020-recurso</key>
+        <title>Recurso de PRI</title>
+        <bdate>8 fevereiro</bdate>
+        <edate>8 fevereiro</edate>
+        <supervisor>José Carlos Ramalho</supervisor>
+    </meta>
+    <workteam>
+        <worker num="a76936">
+            <name>Luís Ferreira</name>
+            <email>a76936@alunos.uminho.pt</email>
+        </worker>
+    </workteam>
+    <abstract>
+        <paragrafo>Pergunta 1.1</paragrafo>
+        <paragrafo>mongoimport -d PEI2020 -c teams --jsonArray PEI-teams.json</paragrafo>
+        
+        <paragrafo>Pergunta 2.1</paragrafo>
+        <paragrafo>87</paragrafo>
+        <paragrafo>Pergunta 2.3</paragrafo>
+        <paragrafo>822</paragrafo>
+
+        
+        <paragrafo>Correr servidor com o npm e abrir em http://localhost:8002/</paragrafo>
+
+    </abstract>
+</pr>
